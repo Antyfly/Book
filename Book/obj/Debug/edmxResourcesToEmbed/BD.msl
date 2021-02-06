@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище BookModelContainer" CdmEntityContainer="EntitiesBook">
+    <EntitySetMapping Name="Group">
+      <EntityTypeMapping TypeName="BookModel.Group">
+        <MappingFragment StoreEntitySet="Group">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Group1" ColumnName="Group" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="BookModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_gr" ColumnName="id_gr" />
+          <ScalarProperty Name="News1" ColumnName="News" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Progress">
+      <EntityTypeMapping TypeName="BookModel.Progress">
+        <MappingFragment StoreEntitySet="Progress">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CompletedTopics" ColumnName="CompletedTopics" />
+          <ScalarProperty Name="CompletedTexts" ColumnName="CompletedTexts" />
+          <ScalarProperty Name="id_Users" ColumnName="id_Users" />
+          <ScalarProperty Name="Progress1" ColumnName="Progress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="BookModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Role1" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="BookModel.Settings">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Theme" ColumnName="Theme" />
+          <ScalarProperty Name="Reminder" ColumnName="Reminder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BookModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BookModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="id_Role" ColumnName="id_Role" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="id_Set" ColumnName="id_Set" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="BookModel.Students">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="id_Users" ColumnName="id_Users" />
+          <ScalarProperty Name="id_Group" ColumnName="id_Group" />
+          <ScalarProperty Name="id_Progr" ColumnName="id_Progr" />
+          <ScalarProperty Name="id_News" ColumnName="id_News" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="BookModel.Teachers">
+        <MappingFragment StoreEntitySet="Teachers">
+          <ScalarProperty Name="id_Users" ColumnName="id_Users" />
+          <ScalarProperty Name="id_Group" ColumnName="id_Group" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

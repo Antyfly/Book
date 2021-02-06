@@ -1,0 +1,39 @@
+﻿<Window x:Class="Book.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Book"
+       mc:Ignorable="d"
+        Title="UserRegistration" Height="550" Width="400" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.RowSpan="9">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="Blue" Offset="0"></GradientStop>
+                    <GradientStop Color="White" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label  Content="Регистрация" Grid.Row="0" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBox x:Name="log2" Grid.Row="1" Text="Введите логин" GotFocus="log2_GotFocus" LostFocus="log2_LostFocus" Style="{StaticResource TexBox}"/>
+        <TextBox x:Name="pas2" Grid.Row="2" Text="Введите пароль" GotFocus="pas2_GotFocus" LostFocus="pas2_LostFocus" Style="{StaticResource TexBox}"/>
+        <TextBox x:Name="group" Grid.Row="3" Text="Введите группу" GotFocus="group_GotFocus" LostFocus="group_LostFocus" Style="{StaticResource TexBox}"/>
+        <TextBox x:Name="mail" Grid.Row="4" Text="Введите почту "  GotFocus="mail_GotFocus" LostFocus="mail_LostFocus" Style="{StaticResource TexBox}"/>
+        <TextBox x:Name="Sname" Grid.Row="5" Text="Введите фамилию" GotFocus="Sname_GotFocus" LostFocus="Sname_LostFocus" Style="{StaticResource TexBox}"/>
+        <TextBox x:Name="Name" Grid.Row="6" Text="Введите имя" GotFocus="Name_GotFocus" LostFocus="Name_LostFocus" Style="{StaticResource TexBox}"/>
+        <TextBox x:Name="Mname" Grid.Row="7" Text="Введите отчество"  GotFocus="Mname_GotFocus" LostFocus="Mname_LostFocus" Style="{StaticResource TexBox}"/>
+        <Button x:Name="logup2" Grid.Row="8" Content="Регистрация" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="70, 10" Click="logup2_Click" Background="{x:Null}"/>
+    </Grid>
+</Window>
