@@ -75,7 +75,7 @@ namespace Book
                 MessageBox.Show("Такой пользователь не зарегистрирован.", "Ошибка при входе", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             */
-            if (log.Text == "Admin" && pas.Text == "admin")
+            if (log.Text == "admin" && pas.Text == "admin")
             {
                 General general = new General();
                 this.Hide();

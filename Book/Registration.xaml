@@ -33,7 +33,7 @@
         <TextBox x:Name="mail" Grid.Row="4" Text="Введите почту "  GotFocus="mail_GotFocus" LostFocus="mail_LostFocus" Style="{StaticResource TexBox}"/>
         <TextBox x:Name="Sname" Grid.Row="5" Text="Введите фамилию" GotFocus="Sname_GotFocus" LostFocus="Sname_LostFocus" Style="{StaticResource TexBox}"/>
         <TextBox x:Name="Name" Grid.Row="6" Text="Введите имя" GotFocus="Name_GotFocus" LostFocus="Name_LostFocus" Style="{StaticResource TexBox}"/>
-        <TextBox x:Name="Mname" Grid.Row="7" Text="Введите отчество"  GotFocus="Mname_GotFocus" LostFocus="Mname_LostFocus" Style="{StaticResource TexBox}"/>
+        <TextBox x:Name="Mname" Grid.Row="7" Text = "Введите отчество"  GotFocus="Mname_GotFocus" LostFocus="Mname_LostFocus" Style="{StaticResource TexBox}"/>
         <Button x:Name="logup2" Grid.Row="8" Content="Регистрация" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="70, 10" Click="logup2_Click" Background="{x:Null}"/>
     </Grid>
 </Window>

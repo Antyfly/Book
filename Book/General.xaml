@@ -16,6 +16,14 @@
             <RowDefinition Height="4*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
+        <Rectangle Grid.RowSpan="3" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="Blue" Offset="0"></GradientStop>
+                    <GradientStop Color="White" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <StackPanel x:Name="StackPanel1" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0" Visibility="Visible">
             <Button x:Name="Back" Grid.Column="0" Grid.Row="0" Style="{StaticResource ButtonStateMenu}" HorizontalAlignment="Right" Margin="0,4,3.667,100" Click="Back_Click" Height="31" Width="32">
                 <Image Source="Image\back.jpg" Height="31"/>
@@ -27,7 +35,7 @@
             <Button x:Name="News" Content="Новости" Style="{StaticResource ButtonStateMenu}" HorizontalAlignment="Center" FontFamily="Times New Roman" FontSize="18" FontWeight="Bold" />
         </StackPanel>
         <Button x:Name="Menu" Grid.Column="0" Grid.Row="0" Style="{StaticResource ButtonStateMenu}" Visibility="Hidden" HorizontalAlignment="Left" Margin="4, 4, 13, 18" Click="Menu_Click">
-            <Image Source="C:\Users\Ksenia\Desktop\Программы\WPF\Book\Book\Image\menu.jpg"/>
+            <Image Source="Image\menu.jpg"/>
         </Button>
     </Grid>
 </Window>
