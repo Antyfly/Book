@@ -148,6 +148,12 @@ namespace Book {
             return;
             case 3:
             this.lk = ((System.Windows.Controls.Button)(target));
+            
+            #line 31 "..\..\General.xaml"
+            this.lk.Click += new System.Windows.RoutedEventHandler(this.lk_Click);
+            
+            #line default
+            #line hidden
             return;
             case 4:
             this.book = ((System.Windows.Controls.Button)(target));

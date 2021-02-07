@@ -35,5 +35,30 @@ namespace Book
             StackPanel1.Visibility = Visibility.Hidden;
             Menu.Visibility = Visibility.Visible;
         }
+
+        private void lk_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void book_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Prograss_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Setting_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void News_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
