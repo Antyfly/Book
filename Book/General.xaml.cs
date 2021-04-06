@@ -205,7 +205,6 @@ namespace Book
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            Counter++;
             CounterLection ++;
             if (CounterLection == 10)
             {
@@ -280,9 +279,12 @@ namespace Book
             {
                 CounterProgressLection = CounterLection;
             }
-            usersData.ProgressLection = CounterProgressLection-1;
-            context.User.Where(x => x.idUser.Equals(usersData.idUser)).First().ProgressLection = usersData.ProgressLection;
-            context.SaveChanges();
+            if (CounterProgressLection - 1 > usersData.ProgressLection)
+            {
+                usersData.ProgressLection = CounterProgressLection - 1;
+                context.User.Where(x => x.idUser.Equals(usersData.idUser)).First().ProgressLection = usersData.ProgressLection;
+                context.SaveChanges();
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -293,11 +295,7 @@ namespace Book
         private void pas_Click(object sender, RoutedEventArgs e)
         {
            
-            if (Counter == 0)
-            {
-                Counter = CounterLection-1;
-            }
-            if (Counter == 9)
+            if (CounterLection == 10)
             {
                 if (tests[9].Answer == 2 && answerBut2.IsChecked == true)
                 {
@@ -309,7 +307,7 @@ namespace Book
                     MessageBox.Show("Ответ неверный!!!");
                 }
             }
-            if (Counter == 8)
+            if (CounterLection == 9)
             {
                 if (tests[8].Answer == 1 && answerBut1.IsChecked == true)
                 {
@@ -323,7 +321,7 @@ namespace Book
                 }
 
             }
-            else if (Counter == 7)
+            else if (CounterLection == 8)
             {
                 if (tests[7].Answer == 3 && answerBut3.IsChecked == true)
                 {
@@ -335,7 +333,7 @@ namespace Book
                     MessageBox.Show("Ответ неверный!!!");
                 }
             }
-            else if (Counter == 6)
+            else if (CounterLection == 7)
             {
                 if (tests[6].Answer == 2 && answerBut2.IsChecked == true)
                 {
@@ -348,7 +346,7 @@ namespace Book
                 }
 
             }
-            else if (Counter == 5)
+            else if (CounterLection == 6)
             {
                 if (tests[5].Answer == 1 && answerBut1.IsChecked == true)
                 {
@@ -360,7 +358,7 @@ namespace Book
                     MessageBox.Show("Ответ неверный!!!");
                 }
             }
-            else if (Counter == 4)
+            else if (CounterLection == 5)
             {
                 if (tests[3].Answer == 2 && answerBut2.IsChecked == true)
                 {
@@ -372,7 +370,7 @@ namespace Book
                     MessageBox.Show("Ответ неверный!!!");
                 }
             }
-            else if (Counter == 3)
+            else if (CounterLection == 4)
             {
                 if (tests[2].Answer == 2 && answerBut2.IsChecked == true)
                 {
@@ -384,7 +382,7 @@ namespace Book
                     MessageBox.Show("Ответ неверный!!!");
                 }
             }
-            else if (Counter == 2)
+            else if (CounterLection == 3)
             {
                 if (tests[1].Answer == 1 && answerBut1.IsChecked == true)
                 {
@@ -396,7 +394,7 @@ namespace Book
                     MessageBox.Show("Ответ неверный!!!");
                 }
             }
-            else if (Counter == 1)
+            else if (CounterLection == 2)
             {
                 if (tests[4].Answer == 1 && answerBut1.IsChecked == true)
                 {
@@ -408,7 +406,7 @@ namespace Book
                     MessageBox.Show("Ответ неверный!!!");
                 }
             }
-            else if (Counter == 0)
+            else if (CounterLection == 1)
             {
                 if (tests[0].Answer == 1 && answerBut1.IsChecked == true)
                 {
@@ -425,9 +423,13 @@ namespace Book
             {
                 CounterProgressTest = ProgressTest;
             }
-            usersData.ProgressTest = CounterProgressTest;
-            context.User.Where(x => x.idUser.Equals(usersData.idUser)).First().ProgressTest = usersData.ProgressTest;
-            context.SaveChanges();
+            if (CounterProgressTest > usersData.ProgressTest)
+            {
+                usersData.ProgressTest = CounterProgressTest;
+                context.User.Where(x => x.idUser.Equals(usersData.idUser)).First().ProgressTest = usersData.ProgressTest;
+                context.SaveChanges();
+            }
+            
         }
     }
 }
