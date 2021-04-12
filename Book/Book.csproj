@@ -86,9 +86,6 @@
       <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
     <Compile Include="AppData.cs" />
-    <Compile Include="General.xaml.cs">
-      <DependentUpon>General.xaml</DependentUpon>
-    </Compile>
     <Compile Include="BD.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,6 +101,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD.edmx</DependentUpon>
     </Compile>
+    <Compile Include="General.xaml.cs">
+      <DependentUpon>General.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Role.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
@@ -115,9 +118,6 @@
     </Compile>
     <Compile Include="User.cs">
       <DependentUpon>BD.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Registration.xaml.cs">
-      <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vivod.cs" />
     <Page Include="Account.xaml">
@@ -167,7 +167,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <EntityDeploy Include="BD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BD.Designer.cs</LastGenOutput>
@@ -175,6 +174,7 @@
     <None Include="BD.edmx.diagram">
       <DependentUpon>BD.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -204,16 +204,6 @@
     <Resource Include="Image\menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BD.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BD.edmx</DependentUpon>
-      <LastGenOutput>BD.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="BD.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BD.edmx</DependentUpon>
-      <LastGenOutput>BD.cs</LastGenOutput>
-    </Content>
     <Resource Include="le\1.txt" />
     <Resource Include="le\10.txt" />
     <Resource Include="le\2.txt" />
@@ -225,6 +215,17 @@
     <Resource Include="le\8.txt" />
     <Resource Include="le\9.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="BD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BD.edmx</DependentUpon>
+      <LastGenOutput>BD.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BD.edmx</DependentUpon>
+      <LastGenOutput>BD.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

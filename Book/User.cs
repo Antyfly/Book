@@ -21,8 +21,8 @@ namespace Book
         public string Name { get; set; }
         public string Patronymic { get; set; }
         public int idRole { get; set; }
-        public Nullable<int> ProgressLection { get; set; }
         public Nullable<int> ProgressTest { get; set; }
+        public Nullable<int> ProgressLection { get; set; }
     
         public virtual Role Role { get; set; }
     }

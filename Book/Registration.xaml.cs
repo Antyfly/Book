@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using static Book.AppData;
 namespace Book
 {
     /// <summary>
@@ -19,7 +19,7 @@ namespace Book
     /// </summary>
     public partial class Registration : Window
     {
-        public bookEntities context = new bookEntities();
+        
 
         public Registration()
         {
@@ -50,7 +50,9 @@ namespace Book
                             Name = Name.Text,
                             Patronymic = Mname.Text,
                             idRole = 2,
-                        });
+                            ProgressTest = 0,
+                            ProgressLection = 0,
+                        }) ;
                         
        
                         context.SaveChanges();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,15 +27,15 @@ namespace Book
         public int ProgressTest;
         public int CounterProgressLection;
         public int CounterLection;
-        public int Counter;
+
 
         List<Test> tests = new List<Test>();
         public General()
         {
             InitializeComponent();
+            
         }
 
-        
         private void Menu_Click(object sender, RoutedEventArgs e)
         {
             StackPanel1.Visibility = Visibility.Visible;
@@ -49,138 +50,119 @@ namespace Book
             StackPanel2.Visibility = Visibility.Visible;
         }
 
-        
-        private void lek1_Click(object sender, RoutedEventArgs e) 
+
+        private void lek1_Click(object sender, RoutedEventArgs e)
         {
+            var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             CounterLection = 1;
+            Questions.Visibility = Visibility.Hidden;
             TextLect.Visibility = Visibility.Visible;
             Enter.Visibility = Visibility.Visible;
-            StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+            StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
             TextLecture.Text = sr.ReadToEnd();
-            question.Text = tests[0].Questions;
-            answerButText1.Text = tests[0].answerOption_1;
-            answerButText2.Text = tests[0].answerOption_2;
-            answerButText3.Text = tests[0].answerOption_3;
         }
 
         private void lek2_Click(object sender, RoutedEventArgs e)
         {
+            var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             CounterLection = 2;
+            Questions.Visibility = Visibility.Hidden;
             TextLect.Visibility = Visibility.Visible;
             Enter.Visibility = Visibility.Visible;
-            StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+            StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
             TextLecture.Text = sr.ReadToEnd();
-            
-            question.Text  = tests[4].Questions;
-            answerButText1.Text = tests[4].answerOption_1;
-            answerButText2.Text = tests[4].answerOption_2;
-            answerButText3.Text = tests[4].answerOption_3;
-           
-            
         }
 
         private void lek3_Click(object sender, RoutedEventArgs e)
         {
+            var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             CounterLection = 3;
+            Questions.Visibility = Visibility.Hidden;
             TextLect.Visibility = Visibility.Visible;
             Enter.Visibility = Visibility.Visible;
-            StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+            StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
             TextLecture.Text = sr.ReadToEnd();
-            question.Text = tests[1].Questions;
-            answerButText1.Text = tests[1].answerOption_1;
-            answerButText2.Text = tests[1].answerOption_2;
-            answerButText3.Text = tests[1].answerOption_3;
         }
 
         private void lek4_Click(object sender, RoutedEventArgs e)
         {
+            var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             CounterLection = 4;
+            Questions.Visibility = Visibility.Hidden;
             TextLect.Visibility = Visibility.Visible;
             Enter.Visibility = Visibility.Visible;
-            StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+            StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
             TextLecture.Text = sr.ReadToEnd();
-            question.Text = tests[2].Questions;
-            answerButText1.Text = tests[2].answerOption_1;
-            answerButText2.Text = tests[2].answerOption_2;
-            answerButText3.Text = tests[2].answerOption_3;
+            
         }
 
         private void lek5_Click(object sender, RoutedEventArgs e)
         {
+            var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             CounterLection = 5;
+            Questions.Visibility = Visibility.Hidden;
             TextLect.Visibility = Visibility.Visible;
             Enter.Visibility = Visibility.Visible;
-            StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+            StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
             TextLecture.Text = sr.ReadToEnd();
-            question.Text = tests[3].Questions;
-            answerButText1.Text = tests[3].answerOption_1;
-            answerButText2.Text = tests[3].answerOption_2;
-            answerButText3.Text = tests[3].answerOption_3;
         }
 
         private void lek6_Click(object sender, RoutedEventArgs e)
         {
+            var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             CounterLection = 6;
+            Questions.Visibility = Visibility.Hidden;
             TextLect.Visibility = Visibility.Visible;
             Enter.Visibility = Visibility.Visible;
-            StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+            StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
             TextLecture.Text = sr.ReadToEnd();
-            question.Text = tests[5].Questions;
-            answerButText1.Text = tests[5].answerOption_1;
-            answerButText2.Text = tests[5].answerOption_2;
-            answerButText3.Text = tests[5].answerOption_3;
         }
 
         private void lek7_Click(object sender, RoutedEventArgs e)
         {
+            var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             CounterLection = 7;
+            Questions.Visibility = Visibility.Hidden;
             TextLect.Visibility = Visibility.Visible;
             Enter.Visibility = Visibility.Visible;
-            StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+            StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
             TextLecture.Text = sr.ReadToEnd();
-            question.Text = tests[6].Questions;
-            answerButText1.Text = tests[6].answerOption_1;
-            answerButText2.Text = tests[6].answerOption_2;
-            answerButText3.Text = tests[6].answerOption_3;
+            
         }
 
         private void lek8_Click(object sender, RoutedEventArgs e)
         {
+            var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             CounterLection = 8;
+            Questions.Visibility = Visibility.Hidden;
             TextLect.Visibility = Visibility.Visible;
             Enter.Visibility = Visibility.Visible;
-            StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+            StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
             TextLecture.Text = sr.ReadToEnd();
-            question.Text = tests[7].Questions;
-            answerButText1.Text = tests[7].answerOption_1;
-            answerButText2.Text = tests[7].answerOption_2;
-            answerButText3.Text = tests[7].answerOption_3;
         }
 
         private void lek9_Click(object sender, RoutedEventArgs e)
         {
+            var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             CounterLection = 9;
+            Questions.Visibility = Visibility.Hidden;
             TextLect.Visibility = Visibility.Visible;
             Enter.Visibility = Visibility.Visible;
-            StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+            StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
             TextLecture.Text = sr.ReadToEnd();
-            question.Text = tests[8].Questions;
-            answerButText1.Text = tests[8].answerOption_1;
-            answerButText2.Text = tests[8].answerOption_2;
-            answerButText3.Text = tests[8].answerOption_3;
+            
         }
 
         private void lek10_Click(object sender, RoutedEventArgs e)
         {
+            var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             CounterLection = 10;
             TextLect.Visibility = Visibility.Visible;
-            Enter.Visibility = Visibility.Hidden;
-            StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+            Enter.Visibility = Visibility.Visible;
+            Questions.Visibility = Visibility.Hidden;
+            StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
             TextLecture.Text = sr.ReadToEnd();
-            question.Text = tests[9].Questions;
-            answerButText1.Text = tests[9].answerOption_1;
-            answerButText2.Text = tests[9].answerOption_2;
-            answerButText3.Text = tests[9].answerOption_3;
+            
         }
 
         private void Vixod_Click(object sender, RoutedEventArgs e)
@@ -205,83 +187,101 @@ namespace Book
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            CounterLection ++;
-            if (CounterLection == 10)
+            CounterLection++;
+            
+            TextLect.Visibility = Visibility.Hidden;
+            Questions.Visibility = Visibility.Visible;
+            if (CounterLection == 11)
             {
-                Enter.Visibility = Visibility.Hidden;
+                CounterProgressLection++;
                 question.Text = tests[9].Questions;
                 answerButText1.Text = tests[9].answerOption_1;
                 answerButText2.Text = tests[9].answerOption_2;
                 answerButText3.Text = tests[9].answerOption_3;
             }
-            if (CounterLection == 9)
+            else if (CounterLection == 10)
             {
+                CounterProgressLection++;
                 question.Text = tests[8].Questions;
                 answerButText1.Text = tests[8].answerOption_1;
                 answerButText2.Text = tests[8].answerOption_2;
                 answerButText3.Text = tests[8].answerOption_3;
             }
-            else if (CounterLection == 8)
+            else if (CounterLection == 9)
             {
+                CounterProgressLection++;
                 question.Text = tests[7].Questions;
                 answerButText1.Text = tests[7].answerOption_1;
                 answerButText2.Text = tests[7].answerOption_2;
                 answerButText3.Text = tests[7].answerOption_3;
             }
-            else if (CounterLection == 7)
+            else if (CounterLection == 8)
             {
+                CounterProgressLection++;
                 question.Text = tests[6].Questions;
                 answerButText1.Text = tests[6].answerOption_1;
                 answerButText2.Text = tests[6].answerOption_2;
                 answerButText3.Text = tests[6].answerOption_3;
             }
-            else if (CounterLection == 6)
+            else if (CounterLection == 7)
             {
+                CounterProgressLection++;
                 question.Text = tests[5].Questions;
                 answerButText1.Text = tests[5].answerOption_1;
                 answerButText2.Text = tests[5].answerOption_2;
                 answerButText3.Text = tests[5].answerOption_3;
             }
-            else if (CounterLection == 5)
+            else if (CounterLection == 6)
             {
+                CounterProgressLection++;
                 question.Text = tests[3].Questions;
                 answerButText1.Text = tests[3].answerOption_1;
                 answerButText2.Text = tests[3].answerOption_2;
                 answerButText3.Text = tests[3].answerOption_3;
             }
-            else if (CounterLection == 4)
+            else if (CounterLection == 5)
             {
+                CounterProgressLection++;
                 question.Text = tests[2].Questions;
                 answerButText1.Text = tests[2].answerOption_1;
                 answerButText2.Text = tests[2].answerOption_2;
                 answerButText3.Text = tests[2].answerOption_3;
             }
-            else if (CounterLection == 3)
+            else if (CounterLection == 4)
             {
+                CounterProgressLection++;
                 question.Text = tests[1].Questions;
                 answerButText1.Text = tests[1].answerOption_1;
                 answerButText2.Text = tests[1].answerOption_2;
                 answerButText3.Text = tests[1].answerOption_3;
             }
-            else if (CounterLection == 2)
+            else if (CounterLection == 3)
             {
+                CounterProgressLection++;
                 question.Text = tests[4].Questions;
                 answerButText1.Text = tests[4].answerOption_1;
                 answerButText2.Text = tests[4].answerOption_2;
                 answerButText3.Text = tests[4].answerOption_3;
             }
+
+            else if (CounterLection == 2)
+            {
+                CounterProgressLection++;
+                question.Text = tests[0].Questions;
+                answerButText1.Text = tests[0].answerOption_1;
+                answerButText2.Text = tests[0].answerOption_2;
+                answerButText3.Text = tests[0].answerOption_3;
+
+            }
             if (CounterLection < 11)
             {
-                StreamReader sr = new StreamReader($@"le\{CounterLection}.txt");
+                var appDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
                 TextLecture.Text = sr.ReadToEnd();
             }
-            if (CounterLection > CounterProgressLection)
+            if (CounterLection -1 > usersData.ProgressLection)
             {
-                CounterProgressLection = CounterLection;
-            }
-            if (CounterProgressLection - 1 > usersData.ProgressLection)
-            {
-                usersData.ProgressLection = CounterProgressLection - 1;
+                usersData.ProgressLection = CounterLection - 1;
                 context.User.Where(x => x.idUser.Equals(usersData.idUser)).First().ProgressLection = usersData.ProgressLection;
                 context.SaveChanges();
             }
@@ -294,64 +294,78 @@ namespace Book
 
         private void pas_Click(object sender, RoutedEventArgs e)
         {
-           
-            if (CounterLection == 10)
+            
+            if (CounterLection == 11)
             {
-                if (tests[9].Answer == 2 && answerBut2.IsChecked == true)
-                {
-                    MessageBox.Show("Ответ верный!!!");
-                    ProgressTest++;
-                }
-                else
-                {
-                    MessageBox.Show("Ответ неверный!!!");
-                }
+                    if (tests[9].Answer == 2 && answerBut2.IsChecked == true)
+                    {
+                        MessageBox.Show("Ответ верный!!!");
+                        ProgressTest++;
+                        Questions.Visibility = Visibility.Hidden;
+                        TextLect.Visibility = Visibility.Hidden;
+                    }
+                    else
+                        MessageBox.Show("Ответ неверный!!!");
             }
-            if (CounterLection == 9)
-            {
+             else if (CounterLection == 10)
+             {
                 if (tests[8].Answer == 1 && answerBut1.IsChecked == true)
-                {
-                    MessageBox.Show("Ответ верный!!!");
-                    ProgressTest++;
-                }
-                else
-                {
-                    MessageBox.Show("Ответ неверный!!!");
-                    ProgressTest++;
-                }
-
+                    {
+                        MessageBox.Show("Ответ верный!!!");
+                        ProgressTest++;
+                        Questions.Visibility = Visibility.Hidden;
+                        TextLect.Visibility = Visibility.Visible;
+                    }
+                    else
+                        MessageBox.Show("Ответ неверный!!!");
+             }
+             else  if (CounterLection == 9)
+             {
+                    if (tests[7].Answer == 3 && answerBut3.IsChecked == true)
+                    {
+                        MessageBox.Show("Ответ верный!!!");
+                        ProgressTest++;
+                        Questions.Visibility = Visibility.Hidden;
+                        TextLect.Visibility = Visibility.Visible;
+                    }
+                    else
+                        MessageBox.Show("Ответ неверный!!!");
             }
             else if (CounterLection == 8)
-            {
-                if (tests[7].Answer == 3 && answerBut3.IsChecked == true)
-                {
-                    MessageBox.Show("Ответ верный!!!");
-                    ProgressTest++;
-                }
-                else
-                {
-                    MessageBox.Show("Ответ неверный!!!");
-                }
-            }
-            else if (CounterLection == 7)
             {
                 if (tests[6].Answer == 2 && answerBut2.IsChecked == true)
                 {
                     MessageBox.Show("Ответ верный!!!");
                     ProgressTest++;
+                    Questions.Visibility = Visibility.Hidden;
+                    TextLect.Visibility = Visibility.Visible;
                 }
                 else
-                {
                     MessageBox.Show("Ответ неверный!!!");
-                }
 
             }
-            else if (CounterLection == 6)
+            else if (CounterLection == 7)
             {
                 if (tests[5].Answer == 1 && answerBut1.IsChecked == true)
                 {
                     MessageBox.Show("Ответ верный!!!");
                     ProgressTest++;
+                    Questions.Visibility = Visibility.Hidden;
+                    TextLect.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    MessageBox.Show("Ответ неверный!!!");
+                }
+            }
+            else if (CounterLection == 6)
+            {
+                if (tests[3].Answer == 2 && answerBut2.IsChecked == true)
+                {
+                    MessageBox.Show("Ответ верный!!!");
+                    ProgressTest++;
+                    Questions.Visibility = Visibility.Hidden;
+                    TextLect.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -360,10 +374,12 @@ namespace Book
             }
             else if (CounterLection == 5)
             {
-                if (tests[3].Answer == 2 && answerBut2.IsChecked == true)
+                if (tests[2].Answer == 2 && answerBut2.IsChecked == true)
                 {
                     MessageBox.Show("Ответ верный!!!");
                     ProgressTest++;
+                    Questions.Visibility = Visibility.Hidden;
+                    TextLect.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -372,10 +388,12 @@ namespace Book
             }
             else if (CounterLection == 4)
             {
-                if (tests[2].Answer == 2 && answerBut2.IsChecked == true)
+                if (tests[1].Answer == 1 && answerBut1.IsChecked == true)
                 {
                     MessageBox.Show("Ответ верный!!!");
                     ProgressTest++;
+                    Questions.Visibility = Visibility.Hidden;
+                    TextLect.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -384,10 +402,12 @@ namespace Book
             }
             else if (CounterLection == 3)
             {
-                if (tests[1].Answer == 1 && answerBut1.IsChecked == true)
+                if (tests[4].Answer == 1 && answerBut1.IsChecked == true)
                 {
                     MessageBox.Show("Ответ верный!!!");
                     ProgressTest++;
+                    Questions.Visibility = Visibility.Hidden;
+                    TextLect.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -396,40 +416,28 @@ namespace Book
             }
             else if (CounterLection == 2)
             {
-                if (tests[4].Answer == 1 && answerBut1.IsChecked == true)
-                {
-                    MessageBox.Show("Ответ верный!!!");
-                    ProgressTest++;
+                    if (tests[0].Answer == 1 && answerBut1.IsChecked == true)
+                    {
+                        MessageBox.Show("Ответ верный!!!");
+                        Questions.Visibility = Visibility.Hidden;
+                        TextLect.Visibility = Visibility.Visible;
+                        ProgressTest++;
                 }
-                else
-                {
-                    MessageBox.Show("Ответ неверный!!!");
-                }
+                    else
+                        MessageBox.Show("Ответ неверный!!!");
             }
-            else if (CounterLection == 1)
+            if (ProgressTest > 10)
             {
-                if (tests[0].Answer == 1 && answerBut1.IsChecked == true)
-                {
-                    MessageBox.Show("Ответ верный!!!");
-                    ProgressTest++;
-                }
-                else
-                {
-                    MessageBox.Show("Ответ неверный!!!");
-                }
+                ProgressTest = 10;
             }
-
-            if ( ProgressTest > CounterProgressTest)
+            if (ProgressTest > usersData.ProgressTest)
             {
-                CounterProgressTest = ProgressTest;
-            }
-            if (CounterProgressTest > usersData.ProgressTest)
-            {
-                usersData.ProgressTest = CounterProgressTest;
+                usersData.ProgressTest = ProgressTest;
                 context.User.Where(x => x.idUser.Equals(usersData.idUser)).First().ProgressTest = usersData.ProgressTest;
                 context.SaveChanges();
             }
-            
-        }
+
+        }   
+
     }
 }

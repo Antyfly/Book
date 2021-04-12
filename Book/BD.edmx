@@ -44,10 +44,10 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
           <Property Name="idRole" Type="int" Nullable="false" />
-          <Property Name="ProgressLection" Type="int" />
           <Property Name="ProgressTest" Type="int" />
+          <Property Name="ProgressLection" Type="int" />
         </EntityType>
-        <Association Name="FK_User_Role">
+        <Association Name="FK_User_Role1">
           <End Role="Role" Type="Self.Role" Multiplicity="1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
           <ReferentialConstraint>
@@ -64,7 +64,7 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Test" EntityType="Self.Test" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+          <AssociationSet Name="FK_User_Role1" Association="Self.FK_User_Role1">
             <End Role="Role" EntitySet="Role" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
@@ -79,7 +79,7 @@
           </Key>
           <Property Name="idRole" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="roleName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="User" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
+          <NavigationProperty Name="User" Relationship="Self.FK_User_Role1" FromRole="Role" ToRole="User" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -113,11 +113,11 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="idRole" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
-          <Property Name="ProgressLection" Type="Int32" />
+          <NavigationProperty Name="Role" Relationship="Self.FK_User_Role1" FromRole="User" ToRole="Role" />
           <Property Name="ProgressTest" Type="Int32" />
+          <Property Name="ProgressLection" Type="Int32" />
         </EntityType>
-        <Association Name="FK_User_Role">
+        <Association Name="FK_User_Role1">
           <End Role="Role" Type="Self.Role" Multiplicity="1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
           <ReferentialConstraint>
@@ -129,22 +129,22 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="bookEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="bookEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Role" EntityType="Self.Role" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Test" EntityType="Self.Test" />
           <EntitySet Name="User" EntityType="Self.User" />
-          <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+          <AssociationSet Name="FK_User_Role1" Association="Self.FK_User_Role1">
             <End Role="Role" EntitySet="Role" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
-          </EntityContainer>
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище bookModelContainer" CdmEntityContainer="bookEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище bookModelContainer" CdmEntityContainer="bookEntities1">
           <EntitySetMapping Name="Role">
             <EntityTypeMapping TypeName="bookModel.Role">
               <MappingFragment StoreEntitySet="Role">
@@ -167,20 +167,20 @@
           <EntitySetMapping Name="Test">
             <EntityTypeMapping TypeName="bookModel.Test">
               <MappingFragment StoreEntitySet="Test">
-                <ScalarProperty Name="Answer" ColumnName="Answer" />
                 <ScalarProperty Name="idTest" ColumnName="idTest" />
                 <ScalarProperty Name="Questions" ColumnName="Questions" />
                 <ScalarProperty Name="answerOption_1" ColumnName="answerOption_1" />
                 <ScalarProperty Name="answerOption_2" ColumnName="answerOption_2" />
                 <ScalarProperty Name="answerOption_3" ColumnName="answerOption_3" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="bookModel.User">
               <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="ProgressTest" ColumnName="ProgressTest" />
                 <ScalarProperty Name="ProgressLection" ColumnName="ProgressLection" />
+                <ScalarProperty Name="ProgressTest" ColumnName="ProgressTest" />
                 <ScalarProperty Name="idUser" ColumnName="idUser" />
                 <ScalarProperty Name="login" ColumnName="login" />
                 <ScalarProperty Name="password" ColumnName="password" />

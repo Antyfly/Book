@@ -19,11 +19,10 @@ namespace Book
     /// </summary>
     public partial class Account : Window
     {
-        
 
-        
         public Account()
-        {   
+        {
+
             InitializeComponent();
             surName.Text = usersData.Surname;
             furtName.Text = usersData.Name;

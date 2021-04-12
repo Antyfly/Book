@@ -21,7 +21,6 @@ namespace Book
     /// </summary>
     public partial class MainWindow : Window
     {
-        bookEntities context = new bookEntities();
         public MainWindow()
         {
             InitializeComponent();
@@ -88,22 +87,6 @@ namespace Book
             {
                 MessageBox.Show("Такой пользователь не зарегистрирован.", "Ошибка при входе", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
-            
-            /*
-            else
-            {
-                if (log.Text == "admin" && pas.Text == "admin")
-                {
-                    General general = new General();
-                    this.Hide();
-                    general.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Такой пользователь не зарегистрирован.", "Ошибка при входе", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }*/
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)

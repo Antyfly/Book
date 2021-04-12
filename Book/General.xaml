@@ -46,41 +46,42 @@
                       >
             <StackPanel x:Name="TextLect" Visibility="Hidden" >
                 <TextBlock x:Name="TextLecture" Foreground="Black" FontSize="18" TextWrapping="Wrap"/>
-                <StackPanel x:Name="testButtons"
-                        Grid.Column="1">
-
-                    <TextBlock x:Name="question" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Width="620" HorizontalAlignment="Left" />
-                    <RadioButton x:Name="answerBut1">
-                        <RadioButton.Content>
-                            <TextBlock x:Name="answerButText1" TextWrapping="Wrap" Foreground="Black"/>
-                        </RadioButton.Content>
-                        <RadioButton.LayoutTransform>
-                            <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
-                        </RadioButton.LayoutTransform>
-                    </RadioButton>
-
-                    <RadioButton x:Name="answerBut2" FontSize="12" Foreground="Black">
-                        <RadioButton.Content>
-                            <TextBlock x:Name="answerButText2" TextWrapping="Wrap" Foreground="Black"/>
-                        </RadioButton.Content>
-                        <RadioButton.LayoutTransform>
-                            <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
-                        </RadioButton.LayoutTransform>
-                    </RadioButton>
-
-                    <RadioButton x:Name="answerBut3" FontSize="12" Foreground="Black">
-                        <RadioButton.Content>
-                            <TextBlock x:Name="answerButText3" TextWrapping="Wrap" Foreground="Black"/>
-                        </RadioButton.Content>
-                        <RadioButton.LayoutTransform>
-                            <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
-                        </RadioButton.LayoutTransform>
-                    </RadioButton>
-                </StackPanel>
                 <Button x:Name="Enter" Content="Далее" Style="{StaticResource ButtonStateMenu}" Click="Enter_Click" />
-                <Button x:Name="pas" Content="Проверить" Style="{StaticResource ButtonStateMenu}" Click="pas_Click" />
+
             </StackPanel>
         </ScrollViewer>
+        <StackPanel x:Name="Questions" Visibility="Hidden" Grid.Column="1" 
+                          Margin="10,4.8,10,9.6"  Grid.Row="1" Grid.RowSpan="2"  >
+            <TextBlock x:Name="question" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Width="620" HorizontalAlignment="Left" />
+            <RadioButton x:Name="answerBut1">
+                <RadioButton.Content>
+                    <TextBlock x:Name="answerButText1" TextWrapping="Wrap" Foreground="Black"/>
+                </RadioButton.Content>
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+
+            <RadioButton x:Name="answerBut2" FontSize="12" Foreground="Black">
+                <RadioButton.Content>
+                    <TextBlock x:Name="answerButText2" TextWrapping="Wrap" Foreground="Black"/>
+                </RadioButton.Content>
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+
+            <RadioButton x:Name="answerBut3" FontSize="12" Foreground="Black">
+                <RadioButton.Content>
+                    <TextBlock x:Name="answerButText3" TextWrapping="Wrap" Foreground="Black"/>
+                </RadioButton.Content>
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+            <Button x:Name="pas" Content="Проверить" Style="{StaticResource ButtonStateMenu}" Click="pas_Click" />
+        </StackPanel>
+
         <StackPanel x:Name="StackPanel3" Orientation="Horizontal"/>
         <Button x:Name="Close" Click="Close_Click" Grid.Column="1" Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource ButtonStateMenu}">
             <Image Source="Image\close.png"/>
