@@ -5,28 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Book"
         mc:Ignorable="d"
-         Title="Вход в систему" Height="550" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" Background="#bab6c1">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Button x:Name="Close" Click="Close_Click"  Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource ButtonStateMenu}">
-            <Image Source="Image\close.png"/>
-        </Button>
-        <Label  Content="Вход" Grid.Row="1" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontStyle="Italic" FontWeight="Bold"/>
-        <TextBox x:Name="log" Grid.Row="2" Text="Введите логин" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" Foreground="Black" GotFocus="log_GotFocus" LostFocus="log_LostFocus" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="30, 10" Background="{x:Null}" />
-        <TextBox x:Name="pas" Grid.Row="3" Text="Введите пароль" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" Foreground="Black" GotFocus="pas_GotFocus" LostFocus="pas_LostFocus" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="30, 10" Background="{x:Null}"/>
-        <Button x:Name="login" Grid.Row="4" Content="Войти" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="70, 10" Click="Login" Background="{x:Null}"/>
-        <TextBlock x:Name="logup" Grid.Row="5" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" Margin="70, 10" HorizontalAlignment="Center" VerticalAlignment="Center" >
+         Title="Вход в систему" Height="400" Width="370" WindowStartupLocation="CenterScreen" WindowStyle="None"  AllowsTransparency="True"  ResizeMode="NoResize" Background="Transparent">
+    <Border CornerRadius="10" BorderThickness="9" Background="#FFE373" >
+        <Border Background="White" Opacity="0.95" CornerRadius="10" BorderThickness="9">
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="Close" Click="Close_Click"  Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource ButtonStateMenu}">
+                <Image Source="Image\close.png"/>
+            </Button>
+            <Label  Content="Вход" Grid.Row="1" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
+                <TextBox x:Name="log" Grid.Row="2" Text="Введите логин"  FontFamily="Times New Roman" Foreground="Black" GotFocus="log_GotFocus" LostFocus="log_LostFocus" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource TexBox}"/>
+                <TextBox x:Name="pas" Grid.Row="3" Text="Введите пароль" FontFamily="Times New Roman" Foreground="Black" GotFocus="pas_GotFocus" LostFocus="pas_LostFocus" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource TexBox}"/>
+                <Button x:Name="login" Grid.Row="4" Content="Войти" FontSize="20" FontFamily="Times New Roman" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Login"  Margin="30,10.2,30.4,9.8" Style="{StaticResource TypeButton}"/>
+                <TextBlock x:Name="logup" Grid.Row="5" FontSize="20" FontFamily="Times New Roman" Margin="70, 10" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <Hyperlink NavigateUri="UserRegistration" Click="Hyperlink_Click">Регистрация</Hyperlink>
-        </TextBlock>
-    </Grid>
+            </TextBlock>
+        </Grid>
+        </Border>
+    </Border>
 </Window>
 
     
