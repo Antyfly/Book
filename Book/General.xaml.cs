@@ -188,7 +188,7 @@ namespace Book
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
             CounterLection++;
-            
+            CounterProgressLection++;
             TextLect.Visibility = Visibility.Hidden;
             Questions.Visibility = Visibility.Visible;
             if (CounterLection == 11)
@@ -279,9 +279,9 @@ namespace Book
                 StreamReader sr = new StreamReader($@"{appDir}\le\{CounterLection}.txt");
                 TextLecture.Text = sr.ReadToEnd();
             }
-            if (CounterLection -1 > usersData.ProgressLection)
+            if (CounterProgressLection > usersData.ProgressLection)
             {
-                usersData.ProgressLection = CounterLection - 1;
+                usersData.ProgressLection = CounterProgressLection;
                 context.User.Where(x => x.idUser.Equals(usersData.idUser)).First().ProgressLection = usersData.ProgressLection;
                 context.SaveChanges();
             }

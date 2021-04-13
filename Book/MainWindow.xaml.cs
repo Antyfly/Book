@@ -36,7 +36,11 @@ namespace Book
 
         private void log_GotFocus(object sender, RoutedEventArgs e)
         {
-            log.Text = "";
+            if (log.Text == "Введите логин")
+            {
+                log.Text = "";
+            }
+            
         }
 
         private void log_LostFocus(object sender, RoutedEventArgs e)
@@ -49,7 +53,11 @@ namespace Book
 
         private void pas_GotFocus(object sender, RoutedEventArgs e)
         {
+            if (pas.Text == "Введите пароль")
+            {
                 pas.Text = "";
+            }
+                
         }
 
         private void pas_LostFocus(object sender, RoutedEventArgs e)

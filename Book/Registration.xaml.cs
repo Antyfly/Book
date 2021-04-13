@@ -28,7 +28,7 @@ namespace Book
 
         private void logup2_Click(object sender, RoutedEventArgs e)
         {
-            if (log2.Text != "Введите логин" && pas2.Text != "Введите пароль" && Sname.Text!="Введите фамилию" && Name.Text!= "Введите имя" && Mname.Text!= "Введите отчество")
+            if (log2.Text != "Введите логин" && pas2.Text != "Введите пароль" && Sname.Text!="Введите фамилию" && Name.Text!= "Введите имя")
             {
                 var result = MessageBox.Show("Вы уверены, что хотите зарегистрироваться???", "Сообщение", MessageBoxButton.YesNo, MessageBoxImage.Information);
                 if (result == MessageBoxResult.Yes)
@@ -42,19 +42,34 @@ namespace Book
                     }
                     else
                     {
-                        context.User.Add(new User
+                        if (Mname.Text != "Введите отчество" && Mname.Text != "")
                         {
-                            login = log2.Text,
-                            password = pas2.Text,
-                            Surname = Sname.Text,
-                            Name = Name.Text,
-                            Patronymic = Mname.Text,
-                            idRole = 2,
-                            ProgressTest = 0,
-                            ProgressLection = 0,
-                        }) ;
-                        
-       
+                            context.User.Add(new User
+                            {
+                                login = log2.Text,
+                                password = pas2.Text,
+                                Surname = Sname.Text,
+                                Name = Name.Text,
+                                Patronymic = Mname.Text,
+                                idRole = 2,
+                                ProgressTest = 0,
+                                ProgressLection = 0,
+                            });
+                        }
+                        else
+                        {
+                            context.User.Add(new User
+                            {
+                                login = log2.Text,
+                                password = pas2.Text,
+                                Surname = Sname.Text,
+                                Name = Name.Text,
+                                Patronymic = null,
+                                idRole = 2,
+                                ProgressTest = 0,
+                                ProgressLection = 0,
+                            });
+                        }
                         context.SaveChanges();
                         MessageBox.Show("Данные успешно сохранены");
                         MainWindow menu = new MainWindow();
@@ -75,7 +90,7 @@ namespace Book
             }
             else
             {
-                MessageBox.Show("Заполните все поля!!!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Заполните все Обязательные поля!!!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
@@ -84,7 +99,11 @@ namespace Book
                
         private void log2_GotFocus(object sender, RoutedEventArgs e)
         {
-            log2.Text = "";
+            if (log2.Text == "Введите логин")
+            {
+                log2.Text = "";
+            }
+            
         }
         private void log2_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -95,7 +114,10 @@ namespace Book
         }
         private void pas2_GotFocus(object sender, RoutedEventArgs e)
         {
-            pas2.Text = "";
+            if (pas2.Text == "Введите пароль")
+            {
+                pas2.Text = "";
+            }
         }
 
         private void pas2_LostFocus(object sender, RoutedEventArgs e)
@@ -109,7 +131,11 @@ namespace Book
         
         private void Sname_GotFocus(object sender, RoutedEventArgs e)
         {
-            Sname.Text = "";
+            if (Sname.Text == "Введите фамилию")
+            {
+                Sname.Text = "";
+            }
+           
         }
         private void Sname_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -121,7 +147,10 @@ namespace Book
 
         private void Name_GotFocus(object sender, RoutedEventArgs e)
         {
-            Name.Text = "";
+            if (Name.Text == "Введите имя")
+            {
+                Name.Text = "";
+            }
         }
 
         private void Name_LostFocus(object sender, RoutedEventArgs e)
@@ -135,7 +164,10 @@ namespace Book
         
         private void Mname_GotFocus(object sender, RoutedEventArgs e)
         {
-            Mname.Text = "";
+            if (Mname.Text == "Введите отчество")
+            {
+                Mname.Text = "";
+            }
         }
         private void Mname_LostFocus(object sender, RoutedEventArgs e)
         {
