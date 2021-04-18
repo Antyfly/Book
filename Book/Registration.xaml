@@ -19,13 +19,13 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Label  Content="Регистрация" Grid.Row="1" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontStyle="Italic" FontWeight="Bold"/>
+        <Label  Content="Регистрация" Grid.Row="1" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
         <TextBox x:Name="log2" Grid.Row="2" Text="Введите логин" GotFocus="log2_GotFocus" LostFocus="log2_LostFocus" Style="{StaticResource TexBox}"/>
         <TextBox x:Name="pas2" Grid.Row="3" Text="Введите пароль" GotFocus="pas2_GotFocus" LostFocus="pas2_LostFocus" Style="{StaticResource TexBox}"/>
         <TextBox x:Name="Sname" Grid.Row="4" Text="Введите фамилию" GotFocus="Sname_GotFocus" LostFocus="Sname_LostFocus" Style="{StaticResource TexBox}" Margin="29,10.2,30,8.4"/>
         <TextBox x:Name="Name" Grid.Row="5" Text="Введите имя" GotFocus="Name_GotFocus" LostFocus="Name_LostFocus" Style="{StaticResource TexBox}" Margin="30,10.6,29,10"/>
         <TextBox x:Name="Mname" Grid.Row="6" Text = "Введите отчество"  GotFocus="Mname_GotFocus" LostFocus="Mname_LostFocus" Style="{StaticResource TexBox}" Margin="29,10,30,8.8"/>
-        <Button x:Name="logup2" Grid.Row="7" Content="Регистрация" FontSize="20" FontFamily="Times New Roman" FontStyle="Italic" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Click="logup2_Click" Background="{x:Null}" Margin="136,0.2,150,60.4" Grid.RowSpan="2"/>
+        <Button x:Name="logup2" Grid.Row="7" Content="Регистрация" FontSize="20" FontFamily="Times New Roman" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Click="logup2_Click" Background="{x:Null}" Margin="136,0.2,150,60.4" Grid.RowSpan="2"/>
         <Button x:Name="back" Grid.Row="0" Click="back_Click" Width="30" Height="30"  Style="{StaticResource ButtonStateMenu}" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Image Source="Image/back.png"/>
         </Button>

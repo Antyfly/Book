@@ -51,27 +51,11 @@ namespace Book
             }
         }
 
-        private void pas_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (pas.Text == "Введите пароль")
-            {
-                pas.Text = "";
-            }
-                
-        }
-
-        private void pas_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (pas.Text == "")
-            {
-                pas.Text = "Введите пароль";
-            }
-        }
 
         private void Login(object sender, RoutedEventArgs e)
         {
             
-            var qwery = context.User.Where(i => i.login == log.Text && i.password == pas.Text).FirstOrDefault();
+            var qwery = context.User.Where(i => i.login == log.Text && i.password == pas.Password).FirstOrDefault();
             int idRole = context.User.Where(i => i.login == log.Text).Select(j => j.idRole).FirstOrDefault();
            
             if (qwery != null && idRole == 2)
@@ -87,7 +71,7 @@ namespace Book
                 this.Hide();
                 admin.ShowDialog();
             }
-            else if (log.Text == "Введите логин" || pas.Text == "Введите пароль")
+            else if (log.Text == "Введите логин" || pas.Password == "")
             {
                     MessageBox.Show("ВВЕДИТЕ ДАННЫЕ ДЛЯ ВХОДА!!!", "Ошибка при входе", MessageBoxButton.OK, MessageBoxImage.Error);
             }

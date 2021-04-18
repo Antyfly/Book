@@ -23,7 +23,7 @@
             </Button>
             <Label  Content="Вход" Grid.Row="1" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
                 <TextBox x:Name="log" Grid.Row="2" Text="Введите логин"  FontFamily="Times New Roman" Foreground="Black" GotFocus="log_GotFocus" LostFocus="log_LostFocus" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource TexBox}"/>
-                <TextBox x:Name="pas" Grid.Row="3" Text="Введите пароль" FontFamily="Times New Roman" Foreground="Black" GotFocus="pas_GotFocus" LostFocus="pas_LostFocus" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource TexBox}"/>
+                <PasswordBox x:Name="pas" Grid.Row="3" FontFamily="Times New Roman" Foreground="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="30,10" />
                 <Button x:Name="login" Grid.Row="4" Content="Войти" FontSize="20" FontFamily="Times New Roman" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Login"  Margin="30,10.2,30.4,9.8" Style="{StaticResource TypeButton}"/>
                 <TextBlock x:Name="logup" Grid.Row="5" FontSize="20" FontFamily="Times New Roman" Margin="70, 10" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <Hyperlink NavigateUri="UserRegistration" Click="Hyperlink_Click">Регистрация</Hyperlink>
