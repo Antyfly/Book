@@ -34,22 +34,7 @@ namespace Book
 
         }
 
-        private void log_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (log.Text == "Введите логин")
-            {
-                log.Text = "";
-            }
-            
-        }
-
-        private void log_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (log.Text == "")
-            {
-                log.Text = "Введите логин";
-            }
-        }
+       
 
 
         private void Login(object sender, RoutedEventArgs e)
@@ -71,7 +56,7 @@ namespace Book
                 this.Hide();
                 admin.ShowDialog();
             }
-            else if (log.Text == "Введите логин" || pas.Password == "")
+            else if (log.Text == "" || pas.Password == "")
             {
                     MessageBox.Show("ВВЕДИТЕ ДАННЫЕ ДЛЯ ВХОДА!!!", "Ошибка при входе", MessageBoxButton.OK, MessageBoxImage.Error);
             }

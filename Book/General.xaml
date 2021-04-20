@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:Book"
         Loaded="Window_Loaded"
         mc:Ignorable="d"
-        Title="General" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#bab6c1" ResizeMode="NoResize" AllowsTransparency="True">
-    <Grid>
+        Title="General" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None"  ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent">
+    <Border CornerRadius="10" BorderThickness="9" Background="#FFE373" >
+        <Border Background="#FFE373" Opacity="0.95" CornerRadius="10" BorderThickness="9">
+            <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.20*"/>
             <ColumnDefinition Width="0.80*"/>
@@ -17,33 +19,26 @@
             <RowDefinition Height="4*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <StackPanel x:Name="StackPanel1" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0" Visibility="Hidden">
-            <Button x:Name="Back" Grid.Column="0" Grid.Row="0" Style="{StaticResource ButtonStateMenu}" HorizontalAlignment="Right" Margin="0,4,3.667,100" Click="Back_Click" Height="31" Width="32">
-                <Image Source="Image\back.png" Height="31"/>
-            </Button>
-            <Button x:Name="lk" Content="Личный кабинет" Style="{StaticResource ButtonStateMenu}" Click="lk_Click"/>
-            <Button x:Name="Vixod" Content="Выход" Style="{StaticResource ButtonStateMenu}" Click="Vixod_Click"/>
+                <StackPanel x:Name="StackPanel1" Grid.RowSpan="2" Grid.Row="1" Grid.Column="0" Visibility="Hidden" Background="#6C8CD5" >
+            <Button x:Name="lk" Content="Личный кабинет" Style="{StaticResource Button}" Click="lk_Click" Margin="0,100,0,0" Height="20" Width="135"/>
+                    <Button x:Name="Vixod" Content="Выход" Style="{StaticResource Button}" Click="Vixod_Click" VerticalAlignment="Center" Height="20" Width="135"/>
         </StackPanel>
-        <Button x:Name="Menu" Grid.Column="0" Grid.Row="0" Style="{StaticResource ButtonStateMenu}" Visibility="Visible" HorizontalAlignment="Left" Margin="4, 4, 13, 18" Click="Menu_Click">
-            <Image Source="Image\menu.png"/>
-        </Button>
-        <StackPanel x:Name="StackPanel2" Grid.RowSpan="3" Grid.Row="1" Grid.Column="0" Visibility="Visible">
-            <Button x:Name="lek1" Style="{StaticResource ButtonStateMenu}" Click="lek1_Click">Лекция 1</Button>
-            <Button x:Name="lek2" Style="{StaticResource ButtonStateMenu}" Click="lek2_Click">Лекция 2</Button>
-            <Button x:Name="lek3" Style="{StaticResource ButtonStateMenu}" Click="lek3_Click">Лекция 3</Button>
-            <Button x:Name="lek4" Style="{StaticResource ButtonStateMenu}" Click="lek4_Click">Лекция 4</Button>
-            <Button x:Name="lek5" Style="{StaticResource ButtonStateMenu}" Click="lek5_Click">Лекция 5</Button>
-            <Button x:Name="lek6" Style="{StaticResource ButtonStateMenu}" Click="lek6_Click">Лекция 6</Button>
-            <Button x:Name="lek7" Style="{StaticResource ButtonStateMenu}" Click="lek7_Click">Лекция 7</Button>
-            <Button x:Name="lek8" Style="{StaticResource ButtonStateMenu}" Click="lek8_Click">Лекция 8</Button>
-            <Button x:Name="lek9" Style="{StaticResource ButtonStateMenu}" Click="lek9_Click">Лекция 9</Button>
-            <Button x:Name="lek10" Style="{StaticResource ButtonStateMenu}" Click="lek10_Click">Лекция 10</Button>
+
+        <StackPanel x:Name="StackPanel2" Grid.RowSpan="3" Grid.Row="1" Grid.Column="0" Visibility="Visible" Background="#6C8CD5">
+            <Button x:Name="lek1" Style="{StaticResource Button}" Click="lek1_Click">Лекция 1</Button>
+            <Button x:Name="lek2" Style="{StaticResource Button}" Click="lek2_Click">Лекция 2</Button>
+            <Button x:Name="lek3" Style="{StaticResource Button}" Click="lek3_Click">Лекция 3</Button>
+            <Button x:Name="lek4" Style="{StaticResource Button}" Click="lek4_Click">Лекция 4</Button>
+            <Button x:Name="lek5" Style="{StaticResource Button}" Click="lek5_Click">Лекция 5</Button>
+            <Button x:Name="lek6" Style="{StaticResource Button}" Click="lek6_Click">Лекция 6</Button>
+            <Button x:Name="lek7" Style="{StaticResource Button}" Click="lek7_Click">Лекция 7</Button>
+            <Button x:Name="lek8" Style="{StaticResource Button}" Click="lek8_Click">Лекция 8</Button>
+            <Button x:Name="lek9" Style="{StaticResource Button}" Click="lek9_Click">Лекция 9</Button>
+            <Button x:Name="lek10" Style="{StaticResource Button}" Click="lek10_Click">Лекция 10</Button>
         </StackPanel>
         <ScrollViewer x:Name="scrollLecture" 
                           Grid.Column="1" 
-                          Margin="10,4.8,10,9.6" 
-                          VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.RowSpan="2" 
-                      >
+                          VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.RowSpan="2" Background="#FF9F8CDE">
             <StackPanel x:Name="TextLect" Visibility="Hidden" >
                 <TextBlock x:Name="TextLecture" Foreground="Black" FontSize="18" TextWrapping="Wrap"/>
                 <Button x:Name="Enter" Content="Далее" Style="{StaticResource ButtonStateMenu}" Click="Enter_Click" />
@@ -82,11 +77,18 @@
             <Button x:Name="pas" Content="Проверить" Style="{StaticResource ButtonStateMenu}" Click="pas_Click" />
         </StackPanel>
 
-        <StackPanel x:Name="StackPanel3" Orientation="Horizontal"/>
+        <StackPanel x:Name="StackPanel3" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,0.2" Width="153" Grid.ColumnSpan="2">
+         <Button x:Name="Menu" Grid.Column="0" Grid.Row="0" Style="{StaticResource ButtonStateMenu}" Visibility="Visible" HorizontalAlignment="Left" Margin="4, 4, 70, 18" Click="Menu_Click">
+            <Image Source="Image\Menu.png"/>
+            </Button>
+                    <Button x:Name="Back"  Click="Back_Click" Height="31" Width="32" Style="{StaticResource ButtonStateMenu}"  VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Hidden">
+                <Image Source="Image\back.png" Height="31" />
+            </Button>
+        </StackPanel>
         <Button x:Name="Close" Click="Close_Click" Grid.Column="1" Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource ButtonStateMenu}">
             <Image Source="Image\close.png"/>
         </Button>
-        <TextBlock x:Name="textTest" 
+                <TextBlock x:Name="textTest" 
                        Margin="20,30,20,500" 
                        Grid.Column="1" 
                        Foreground="Black" 
@@ -94,7 +96,8 @@
                        TextWrapping="Wrap"
                        TextAlignment="Center"
                        Visibility="Hidden">
-        </TextBlock>
-
-    </Grid>
+                </TextBlock>
+            </Grid>
+        </Border>
+    </Border>
 </Window>

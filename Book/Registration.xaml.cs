@@ -101,6 +101,7 @@ namespace Book
         {
             if (log2.Text == "Введите логин")
             {
+                log2.Foreground = Brushes.Black;
                 log2.Text = "";
             }
             
@@ -109,6 +110,7 @@ namespace Book
         {
            if (log2.Text == "")
             {
+                log2.Foreground = Brushes.Gray;
                 log2.Text = "Введите логин";
             }
         }
@@ -116,6 +118,7 @@ namespace Book
         {
             if (pas2.Text == "Введите пароль")
             {
+                pas2.Foreground = Brushes.Black;
                 pas2.Text = "";
             }
         }
@@ -124,6 +127,7 @@ namespace Book
         {
             if (pas2.Text == "")
             {
+                pas2.Foreground = Brushes.Gray;
                 pas2.Text = "Введите пароль";
             }
         }
@@ -133,6 +137,7 @@ namespace Book
         {
             if (Sname.Text == "Введите фамилию")
             {
+                Sname.Foreground = Brushes.Black;
                 Sname.Text = "";
             }
            
@@ -141,6 +146,7 @@ namespace Book
         {
             if (Sname.Text == "")
             {
+                Sname.Foreground = Brushes.Gray;
                 Sname.Text = "Введите фамилию";
             }
         }
@@ -149,6 +155,7 @@ namespace Book
         {
             if (Name.Text == "Введите имя")
             {
+                Name.Foreground = Brushes.Black;
                 Name.Text = "";
             }
         }
@@ -157,6 +164,7 @@ namespace Book
         {
             if (Name.Text == "")
             {
+                Name.Foreground = Brushes.Gray;
                 Name.Text = "Введите имя";
             }
         }
@@ -166,6 +174,7 @@ namespace Book
         {
             if (Mname.Text == "Введите отчество")
             {
+                Mname.Foreground = Brushes.Black;
                 Mname.Text = "";
             }
         }
@@ -173,6 +182,7 @@ namespace Book
         {
             if (Mname.Text == "")
             {
+                Mname.Foreground = Brushes.Gray;
                 Mname.Text = "Введите отчество";
             }
         }

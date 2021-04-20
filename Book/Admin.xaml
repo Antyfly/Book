@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Book"
         mc:Ignorable="d"
-        Title="Admin" Height="500" Width="800" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="#bab6c1" Loaded="Window_Loaded">
+        Title="Admin" Height="500" Width="800" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent" Loaded="Window_Loaded">
+    <Border CornerRadius="10" BorderThickness="9" Background="#FFE373" >
+        <Border Background="#FFE373" Opacity="0.95" CornerRadius="10" BorderThickness="9">
     <Grid>
         <Button x:Name="Close" Click="Close_Click"  Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource ButtonStateMenu}" Panel.ZIndex="1">
             <Image Source="Image\close.png"/>
         </Button>
-        <ListView x:Name="listUsers" Background="#bab6c1" Foreground="White" FontSize="20">
+                <ListView x:Name="listUsers" Background="#FF9F8CDE" Foreground="White" FontSize="20">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Имя" Width="auto"   DisplayMemberBinding="{Binding surname}"/>
@@ -40,4 +42,6 @@
             </ListView.View>
         </ListView>
     </Grid>
+        </Border>
+    </Border>
 </Window>

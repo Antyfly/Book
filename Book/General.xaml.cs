@@ -41,6 +41,7 @@ namespace Book
             StackPanel1.Visibility = Visibility.Visible;
             Menu.Visibility = Visibility.Hidden;
             StackPanel2.Visibility = Visibility.Hidden;
+            Back.Visibility = Visibility.Visible;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -48,6 +49,7 @@ namespace Book
             StackPanel1.Visibility = Visibility.Hidden;
             Menu.Visibility = Visibility.Visible;
             StackPanel2.Visibility = Visibility.Visible;
+            Back.Visibility = Visibility.Hidden;
         }
 
 

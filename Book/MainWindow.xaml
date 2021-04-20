@@ -9,26 +9,28 @@
     <Border CornerRadius="10" BorderThickness="9" Background="#FFE373" >
         <Border Background="White" Opacity="0.95" CornerRadius="10" BorderThickness="9">
             <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Button x:Name="Close" Click="Close_Click"  Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource ButtonStateMenu}">
-                <Image Source="Image\close.png"/>
-            </Button>
-            <Label  Content="Вход" Grid.Row="1" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
-                <TextBox x:Name="log" Grid.Row="2" Text="Введите логин"  FontFamily="Times New Roman" Foreground="Black" GotFocus="log_GotFocus" LostFocus="log_LostFocus" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource TexBox}"/>
-                <PasswordBox x:Name="pas" Grid.Row="3" FontFamily="Times New Roman" Foreground="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="30,10" />
-                <Button x:Name="login" Grid.Row="4" Content="Войти" FontSize="20" FontFamily="Times New Roman" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Login"  Margin="30,10.2,30.4,9.8" Style="{StaticResource TypeButton}"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button x:Name="Close" Click="Close_Click"  Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource ButtonStateMenu}">
+                    <Image Source="Image\close.png"/>
+                </Button>
+                <Label  Content="Вход" Grid.Row="1" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
+                <Image Source="Image\Login.png" Height="30" Width="30" Grid.Row="2" HorizontalAlignment="Left" Margin="4,11.2,0,10.8" Visibility="Hidden"/>
+                <Image Source="Image\pas.png" Width="60" Height="50" Grid.Row="3" HorizontalAlignment="Left" Margin="-10,0.2,0,1.8" Visibility="Hidden"/>
+                <TextBox x:Name="log" Grid.Row="2"  FontFamily="Times New Roman" Foreground="Black" Style="{StaticResource TextBox}" Margin="40,10.2"/>
+                <PasswordBox x:Name="pas" Grid.Row="3" FontFamily="Times New Roman" Foreground="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="40,10.2" />
+                <Button x:Name="login" Grid.Row="4" Content="Войти" FontSize="20" FontFamily="Times New Roman" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Login"  Margin="40,10.2" Style="{StaticResource TypeButton}"/>
                 <TextBlock x:Name="logup" Grid.Row="5" FontSize="20" FontFamily="Times New Roman" Margin="70, 10" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <Hyperlink NavigateUri="UserRegistration" Click="Hyperlink_Click">Регистрация</Hyperlink>
-            </TextBlock>
-        </Grid>
+                </TextBlock>
+            </Grid>
         </Border>
     </Border>
 </Window>

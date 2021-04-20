@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Book"
         mc:Ignorable="d"
-        Title="Account" Height="550" Width="400"  WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="#bab6c1" WindowStartupLocation="CenterScreen">
-
-    <Grid>
+        Title="Account" Height="550" Width="400"  WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="10" BorderThickness="9" Background="#FFE373" >
+        <Border Background="White" Opacity="0.95" CornerRadius="10" BorderThickness="9">
+            <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -29,13 +30,13 @@
 
         <TextBlock Grid.Row="2" Text="Личные данные:" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="22" FontWeight="Bold" FontFamily="Times New Roman"/>
 
-        <TextBlock Grid.Row="3" HorizontalAlignment="Right" Margin="0,15,300,15" Foreground="Black" FontSize="18"><Run FontSize="20" FontFamily="Times New Roman" Text="Фамилия"/><Run Text=":"/></TextBlock>
+        <TextBlock Grid.Row="3" HorizontalAlignment="Right" Margin="0,14.8,277.8,15.2" Foreground="Black" FontSize="18"><Run FontSize="20" FontFamily="Times New Roman" Text="Фамилия"/><Run Text=":"/></TextBlock>
         <TextBlock x:Name="surName" Grid.Row="3" HorizontalAlignment="Left" Margin="120,15,0,15" Foreground="Black" FontSize="18"/>
 
         <TextBlock Grid.Row="4" Text="Имя:"  HorizontalAlignment="Right" Margin="0,15,300,15" Foreground="Black" FontSize="20" FontFamily="Times New Roman"/>
         <TextBlock x:Name="furtName" Grid.Row="4" HorizontalAlignment="Left" Margin="120,15,0,15" Foreground="Black" FontSize="18"/>
 
-        <TextBlock Grid.Row="5" Text="Отчество:"  HorizontalAlignment="Right" Margin="0,15,300,15" Foreground="Black" FontSize="20" FontFamily="Times New Roman"/>
+        <TextBlock Grid.Row="5" Text="Отчество:"  HorizontalAlignment="Right" Margin="0,16.8,271.8,13.4" Foreground="Black" FontSize="20" FontFamily="Times New Roman"/>
         <TextBlock x:Name="Patr" Grid.Row="5" HorizontalAlignment="Left" Margin="120,15,0,15" Foreground="Black" FontSize="18"/>
 
         <Label Content="Прогресс:" Grid.Row="6" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold"/>
@@ -49,5 +50,7 @@
         <Button x:Name="Back" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ButtonStateMenu}" Click="Back_Click">
             <Image Source="Image\back.png" Height="31" Width="31"/>
         </Button>
-    </Grid>
+            </Grid>
+        </Border>
+    </Border>
 </Window>

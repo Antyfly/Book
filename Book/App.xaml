@@ -15,7 +15,7 @@
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
 
-        <Style TargetType="TextBox" x:Key="TexBox">
+        <Style TargetType="TextBox" x:Key="TextBox">
             <Setter Property="Background" Value="{x:Null}"/>
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontFamily" Value="20"/>
@@ -70,6 +70,45 @@
                                 <Border CornerRadius="5"
                                                         Background="#A668D5"
                                                         BorderThickness="0.5">
+                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+        <Style x:Key="Button" TargetType="Button">
+            <Setter Property="Margin" Value="5,5"/>
+            <Setter Property="ItemsControl.Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="3" Opacity="0.7" Color="#023047"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsControl.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5"
+                           Background="#FFC540"
+                            BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="Button.IsMouseOver" Value="True">
+                    <Setter Property="ItemsControl.Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="5"
+                                                        Background="#FFB100">
                                     <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                                 </Border>
