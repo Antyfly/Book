@@ -22,8 +22,8 @@
                     <Image Source="Image\close.png"/>
                 </Button>
                 <Label  Content="Вход" Grid.Row="1" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
-                <Image Source="Image\Login.png" Height="30" Width="30" Grid.Row="2" HorizontalAlignment="Left" Margin="4,11.2,0,10.8" Visibility="Hidden"/>
-                <Image Source="Image\pas.png" Width="60" Height="50" Grid.Row="3" HorizontalAlignment="Left" Margin="-10,0.2,0,1.8" Visibility="Hidden"/>
+                <Image Source="Image\login.png" Height="30" Width="25" Grid.Row="2" HorizontalAlignment="Left" Margin="4,11,0,10.8" Visibility="Visible"/>
+                <Image Source="Image\pas.png" Width="25" Height="30" Grid.Row="3" HorizontalAlignment="Left" Margin="4,11,0,10.8" Visibility="Visible"/>
                 <TextBox x:Name="log" Grid.Row="2"  FontFamily="Times New Roman" Foreground="Black" Style="{StaticResource TextBox}" Margin="40,10.2"/>
                 <PasswordBox x:Name="pas" Grid.Row="3" FontFamily="Times New Roman" Foreground="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="40,10.2" />
                 <Button x:Name="login" Grid.Row="4" Content="Войти" FontSize="20" FontFamily="Times New Roman" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Login"  Margin="40,10.2" Style="{StaticResource TypeButton}"/>

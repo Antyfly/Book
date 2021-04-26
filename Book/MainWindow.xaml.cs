@@ -41,16 +41,16 @@ namespace Book
         {
             
             var qwery = context.User.Where(i => i.login == log.Text && i.password == pas.Password).FirstOrDefault();
-            int idRole = context.User.Where(i => i.login == log.Text).Select(j => j.idRole).FirstOrDefault();
+           // int idRole = context.User.Where(i => i.login == log.Text).Select(j => j.idRole).FirstOrDefault();
            
-            if (qwery != null && idRole == 2)
+            if (qwery != null && qwery.idRole == 2)
             {
                 usersData = qwery;
                 General general = new General();
                 this.Hide();
                 general.ShowDialog();
             }
-            else if (qwery != null && idRole == 1)
+            else if (qwery != null && qwery.idRole == 1)
             {
                 Admin admin = new Admin();
                 this.Hide();
